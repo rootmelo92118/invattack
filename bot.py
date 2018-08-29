@@ -19,7 +19,7 @@ def lineBot(op):
                             targets = []
                             targets.append(str1)
                             client.findAndAddContactsByMid(str1)
-                            groupname = "炸三小 有叫你炸是不是"
+                            groupname = "嫌人家群多? 好 我送你更多"
                             for target in targets:
                                 client.createGroup(groupname, [target])
                                 print("啟動")
