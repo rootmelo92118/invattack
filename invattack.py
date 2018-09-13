@@ -29,7 +29,6 @@ def RECEIVE_MESSAGE(op):
                     for target in targets:
                         client.createGroup(groupname, [target])
                         print("啟動")
-                    client.sendMessage(msg.to, "啟動")
             else:
                 pass
         else:
