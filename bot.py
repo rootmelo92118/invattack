@@ -9,7 +9,7 @@ whitelist = ["u52afe1d4ea5332242efacfeb9190d2a3"]
 
 def lineBot(op):
     try:
-        if op.type ==13:
+        if op.type == 13:
                 client.acceptGroupInvitation(op.param1)
         if op.type == 26:
             msg = op.message
