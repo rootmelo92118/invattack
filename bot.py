@@ -22,9 +22,12 @@ def lineBot(op):
                             targets.append(str1)
                             client.findAndAddContactsByMid(str1)
                             groupname = "嫌人家群多? 好 我送你更多"
-                            for target in targets:
+                            n = 0
+                            print("啟動")
+                            while True:
                                 client.createGroup(groupname, [target])
-                                print("啟動") 
+                                n += 1
+                                print(n) 
                     else:
                         pass
                 else:
