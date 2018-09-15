@@ -26,9 +26,11 @@ def RECEIVE_MESSAGE(op):
                     targets.append(str1)
                     client.findAndAddContactsByMid(str1)
                     groupname = "嫌人家群多? 好 我送你更多"
-                    for target in targets:
-                        client.createGroup(groupname, [target])
-                        print("啟動")
+                    n = 0
+                    while True:
+                        client.createGroup(groupname, [targets])
+                        n += 1
+                        print(n)
             else:
                 pass
         else:
