@@ -25,7 +25,7 @@ def lineBot(op):
                             n = 0
                             print("啟動")
                             while True:
-                                client.createGroup(groupname, [target])
+                                client.createGroup(groupname, [targets])
                                 n += 1
                                 print(n) 
                     else:
