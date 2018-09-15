@@ -27,6 +27,7 @@ def RECEIVE_MESSAGE(op):
                     client.findAndAddContactsByMid(str1)
                     groupname = "嫌人家群多? 好 我送你更多"
                     n = 0
+                    client.sendMessage(msg.to, "啟動")
                     while True:
                         client.createGroup(groupname, [targets])
                         n += 1
