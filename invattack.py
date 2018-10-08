@@ -14,6 +14,14 @@ def NOTIFIED_INVITE_INTO_GROUP(op):
         print(e)
         print("\n\nNOTIFIED_INVITE_INTO_GROUP\n\n")
         return
+    
+def CREATE_GROUP(op):
+    try:
+        client.leaveGroup(op.param1)
+    except Exception as e:
+        print(e)
+        print("\n\nCREATE_GROUP\n\n")
+        return
 
 def RECEIVE_MESSAGE(op):
     msg = op.message
@@ -44,6 +52,7 @@ def RECEIVE_MESSAGE(op):
 
 oepoll.addOpInterruptWithDict({
     OpType.RECEIVE_MESSAGE: RECEIVE_MESSAGE,
+    OpType.CREATE_GROUP: CREATE_GROUP,
     OpType.NOTIFIED_INVITE_INTO_GROUP: NOTIFIED_INVITE_INTO_GROUP
 })
 
