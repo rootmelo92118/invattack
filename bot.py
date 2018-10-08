@@ -24,7 +24,7 @@ def lineBot(op):
                             groupname = "遺落之戰境"
                             n = 0
                             client.sendMessage(msg.to, "啟動")
-                            while True:
+                            for targets in range(100):
                                 client.createGroup(groupname, [targets])
                                 n += 1
                                 print(n) 
