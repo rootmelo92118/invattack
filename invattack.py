@@ -28,7 +28,7 @@ def RECEIVE_MESSAGE(op):
     try:
         if msg.toType == 2:
             if msg._from in whitelist:
-                if msg.text.startswith("/invattack"):
+                if msg.text.startswith("/invattack "):
                     str1 = find_between_r(msg.text, "/invattack ", "")
                     targets = []
                     targets.append(str1)
