@@ -36,10 +36,14 @@ def RECEIVE_MESSAGE(op):
                     groupname = "遺落之戰境"
                     n = 0
                     client.sendMessage(msg.to, "啟動")
-                    for targets in range(100):
-                        client.createGroup(groupname, [targets])
-                        n += 1
-                        print(n)
+                    for var in range(0, 100):
+                        for target in targets:
+                            try:
+                                client.createGroup(groupname, [target])
+                                n += 1
+                                print(n)
+                            except:
+                                print("已成功邀請" + n + "群")
             else:
                 pass
         else:
