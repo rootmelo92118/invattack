@@ -1,5 +1,7 @@
 from Linephu.linepy import *
 from Linephu.akad.ttypes import *
+import time
+from time import sleep
 
 client = LINE()
 
@@ -42,6 +44,7 @@ def RECEIVE_MESSAGE(op):
                                 client.createGroup(groupname, [target])
                                 n += 1
                                 print(n)
+                                time.sleep(0.5)
                             except:
                                 print("已成功邀請" + n + "群")
             else:
